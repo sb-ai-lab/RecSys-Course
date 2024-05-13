@@ -1,0 +1,83 @@
+[2024-05-13T07:29:19.948+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Sasrec_model_DAG.upload_model_to_mlflow manual__2024-05-13T07:15:32.708775+00:00 [queued]>
+[2024-05-13T07:29:19.955+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Sasrec_model_DAG.upload_model_to_mlflow manual__2024-05-13T07:15:32.708775+00:00 [queued]>
+[2024-05-13T07:29:19.955+0000] {taskinstance.py:1359} INFO - Starting attempt 3 of 3
+[2024-05-13T07:29:19.967+0000] {taskinstance.py:1380} INFO - Executing <Task(_PythonDecoratedOperator): upload_model_to_mlflow> on 2024-05-13 07:15:32.708775+00:00
+[2024-05-13T07:29:19.984+0000] {standard_task_runner.py:57} INFO - Started process 971 to run task
+[2024-05-13T07:29:19.988+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Sasrec_model_DAG', 'upload_model_to_mlflow', 'manual__2024-05-13T07:15:32.708775+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/sasrec_dag.py', '--cfg-path', '/tmp/tmp0cuc2kv0']
+[2024-05-13T07:29:19.992+0000] {standard_task_runner.py:85} INFO - Job 8: Subtask upload_model_to_mlflow
+[2024-05-13T07:29:20.029+0000] {task_command.py:415} INFO - Running <TaskInstance: Sasrec_model_DAG.upload_model_to_mlflow manual__2024-05-13T07:15:32.708775+00:00 [running]> on host a7d11f6dcbcd
+[2024-05-13T07:29:20.088+0000] {instantiator.py:21} INFO - Created a temporary directory at /tmp/tmprfgysm1b
+[2024-05-13T07:29:20.089+0000] {instantiator.py:76} INFO - Writing /tmp/tmprfgysm1b/_remote_module_non_scriptable.py
+[2024-05-13T07:29:20.145+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Sasrec_model_DAG' AIRFLOW_CTX_TASK_ID='upload_model_to_mlflow' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T07:15:32.708775+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-13T07:15:32.708775+00:00'
+[2024-05-13T07:29:20.146+0000] {sasrec_dag.py:310} INFO - /opt/***
+[2024-05-13T07:29:20.147+0000] {sasrec_dag.py:311} INFO - ['dags', 'logs', 'models', 'webserver_config.py', 'plugins', 'config', 'volumes', '***-worker.pid', '***.cfg', 'model_logs', 'model_checkpoints', 'requirements.txt']
+[2024-05-13T07:29:20.583+0000] {sasrec_dag.py:320} INFO - SasRec(
+  (_model): SasRecModel(
+    (item_embedder): SasRecEmbeddings(
+      (item_emb): Embedding(1683, 64, padding_idx=1682)
+      (pos_emb): SasRecPositionalEmbedding(
+        (pe): Embedding(10, 64)
+      )
+      (item_emb_dropout): Dropout(p=0.5, inplace=False)
+    )
+    (sasrec_layers): SasRecLayers(
+      (attention_layers): ModuleList(
+        (0): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=64, out_features=64, bias=True)
+        )
+        (1): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=64, out_features=64, bias=True)
+        )
+      )
+      (attention_layernorms): ModuleList(
+        (0): LayerNorm((64,), eps=1e-08, elementwise_affine=True)
+        (1): LayerNorm((64,), eps=1e-08, elementwise_affine=True)
+      )
+      (forward_layers): ModuleList(
+        (0): SasRecPointWiseFeedForward(
+          (conv1): Conv1d(64, 64, kernel_size=(1,), stride=(1,))
+          (dropout1): Dropout(p=0.5, inplace=False)
+          (relu): ReLU()
+          (conv2): Conv1d(64, 64, kernel_size=(1,), stride=(1,))
+          (dropout2): Dropout(p=0.5, inplace=False)
+        )
+        (1): SasRecPointWiseFeedForward(
+          (conv1): Conv1d(64, 64, kernel_size=(1,), stride=(1,))
+          (dropout1): Dropout(p=0.5, inplace=False)
+          (relu): ReLU()
+          (conv2): Conv1d(64, 64, kernel_size=(1,), stride=(1,))
+          (dropout2): Dropout(p=0.5, inplace=False)
+        )
+      )
+      (forward_layernorms): ModuleList(
+        (0): LayerNorm((64,), eps=1e-08, elementwise_affine=True)
+        (1): LayerNorm((64,), eps=1e-08, elementwise_affine=True)
+      )
+    )
+    (output_normalization): SasRecNormalizer(
+      (last_layernorm): LayerNorm((64,), eps=1e-08, elementwise_affine=True)
+    )
+    (_head): EmbeddingTyingHead(
+      (_item_embedder): SasRecEmbeddings(
+        (item_emb): Embedding(1683, 64, padding_idx=1682)
+        (pos_emb): SasRecPositionalEmbedding(
+          (pe): Embedding(10, 64)
+        )
+        (item_emb_dropout): Dropout(p=0.5, inplace=False)
+      )
+    )
+  )
+  (_loss): CrossEntropyLoss()
+)
+[2024-05-13T07:29:20.732+0000] {logging_mixin.py:151} WARNING - 2024/05/13 07:29:20 INFO mlflow.types.utils: Unsupported type hint: typing.List[int], skipping schema inference
+[2024-05-13T07:29:20.732+0000] {logging_mixin.py:151} WARNING - 2024/05/13 07:29:20 INFO mlflow.types.utils: Unsupported type hint: typing.List[int], skipping schema inference
+[2024-05-13T07:29:20.746+0000] {exceptions.py:175} WARNING - /home/***/.local/lib/python3.10/site-packages/_distutils_hack/__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+[2024-05-13T07:29:21.276+0000] {logging_mixin.py:151} WARNING - Registered model 'sasrec' already exists. Creating a new version of this model...
+[2024-05-13T07:29:21.301+0000] {logging_mixin.py:151} WARNING - 2024/05/13 07:29:21 INFO mlflow.tracking._model_registry.client: Waiting up to 300 seconds for model version to finish creation. Model name: sasrec, version 3
+[2024-05-13T07:29:21.301+0000] {logging_mixin.py:151} WARNING - Created version '3' of model 'sasrec'.
+[2024-05-13T07:29:21.319+0000] {python.py:194} INFO - Done. Returned value was: True
+[2024-05-13T07:29:21.338+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Sasrec_model_DAG, task_id=upload_model_to_mlflow, execution_date=20240513T071532, start_date=20240513T072919, end_date=20240513T072921
+[2024-05-13T07:29:21.401+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-05-13T07:29:21.417+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

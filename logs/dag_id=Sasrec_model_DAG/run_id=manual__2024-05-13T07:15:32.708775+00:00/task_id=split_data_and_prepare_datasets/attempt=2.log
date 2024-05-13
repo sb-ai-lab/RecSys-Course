@@ -1,0 +1,13 @@
+[2024-05-13T07:59:19.373+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Sasrec_model_DAG.split_data_and_prepare_datasets manual__2024-05-13T07:15:32.708775+00:00 [queued]>
+[2024-05-13T07:59:19.380+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Sasrec_model_DAG.split_data_and_prepare_datasets manual__2024-05-13T07:15:32.708775+00:00 [queued]>
+[2024-05-13T07:59:19.380+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2024-05-13T07:59:19.390+0000] {taskinstance.py:1380} INFO - Executing <Task(_PythonDecoratedOperator): split_data_and_prepare_datasets> on 2024-05-13 07:15:32.708775+00:00
+[2024-05-13T07:59:19.400+0000] {standard_task_runner.py:57} INFO - Started process 1777 to run task
+[2024-05-13T07:59:19.403+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Sasrec_model_DAG', 'split_data_and_prepare_datasets', 'manual__2024-05-13T07:15:32.708775+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/sasrec_dag.py', '--cfg-path', '/tmp/tmpin15ni27']
+[2024-05-13T07:59:19.406+0000] {standard_task_runner.py:85} INFO - Job 11: Subtask split_data_and_prepare_datasets
+[2024-05-13T07:59:19.442+0000] {task_command.py:415} INFO - Running <TaskInstance: Sasrec_model_DAG.split_data_and_prepare_datasets manual__2024-05-13T07:15:32.708775+00:00 [running]> on host a7d11f6dcbcd
+[2024-05-13T07:59:19.510+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Sasrec_model_DAG' AIRFLOW_CTX_TASK_ID='split_data_and_prepare_datasets' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T07:15:32.708775+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-13T07:15:32.708775+00:00'
+[2024-05-13T07:59:20.202+0000] {python.py:194} INFO - Done. Returned value was: 1682
+[2024-05-13T07:59:20.221+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Sasrec_model_DAG, task_id=split_data_and_prepare_datasets, execution_date=20240513T071532, start_date=20240513T075919, end_date=20240513T075920
+[2024-05-13T07:59:20.256+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-05-13T07:59:20.278+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

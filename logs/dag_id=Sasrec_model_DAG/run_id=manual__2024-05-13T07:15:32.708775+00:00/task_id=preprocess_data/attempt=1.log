@@ -1,0 +1,39 @@
+[2024-05-13T07:15:38.269+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Sasrec_model_DAG.preprocess_data manual__2024-05-13T07:15:32.708775+00:00 [queued]>
+[2024-05-13T07:15:38.275+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Sasrec_model_DAG.preprocess_data manual__2024-05-13T07:15:32.708775+00:00 [queued]>
+[2024-05-13T07:15:38.276+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-05-13T07:15:38.286+0000] {taskinstance.py:1380} INFO - Executing <Task(_PythonDecoratedOperator): preprocess_data> on 2024-05-13 07:15:32.708775+00:00
+[2024-05-13T07:15:38.295+0000] {standard_task_runner.py:57} INFO - Started process 184 to run task
+[2024-05-13T07:15:38.298+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Sasrec_model_DAG', 'preprocess_data', 'manual__2024-05-13T07:15:32.708775+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/sasrec_dag.py', '--cfg-path', '/tmp/tmp102rozi2']
+[2024-05-13T07:15:38.301+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask preprocess_data
+[2024-05-13T07:15:38.335+0000] {task_command.py:415} INFO - Running <TaskInstance: Sasrec_model_DAG.preprocess_data manual__2024-05-13T07:15:32.708775+00:00 [running]> on host a7d11f6dcbcd
+[2024-05-13T07:15:38.385+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Sasrec_model_DAG' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T07:15:32.708775+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-13T07:15:32.708775+00:00'
+[2024-05-13T07:15:38.389+0000] {movielens.py:124} INFO - Downloading ml-100k from grouplens...
+[2024-05-13T07:15:38.390+0000] {logging_mixin.py:151} WARNING - 0.00B [00:00, ?B/s]
+[2024-05-13T07:15:39.681+0000] {logging_mixin.py:151} WARNING -   0%|          | 8.19k/4.92M [00:01<12:54, 6.35kB/s]
+[2024-05-13T07:15:39.824+0000] {logging_mixin.py:151} WARNING -   0%|          | 24.6k/4.92M [00:01<03:51, 21.1kB/s]
+[2024-05-13T07:15:39.968+0000] {logging_mixin.py:151} WARNING -   1%|1         | 57.3k/4.92M [00:01<01:28, 55.0kB/s]
+[2024-05-13T07:15:40.112+0000] {logging_mixin.py:151} WARNING -   2%|2         | 115k/4.92M [00:01<00:39, 120kB/s]  
+[2024-05-13T07:15:40.256+0000] {logging_mixin.py:151} WARNING -   5%|4         | 229k/4.92M [00:01<00:17, 265kB/s]
+[2024-05-13T07:15:40.399+0000] {logging_mixin.py:151} WARNING -   9%|9         | 459k/4.92M [00:02<00:07, 576kB/s]
+[2024-05-13T07:15:40.543+0000] {logging_mixin.py:151} WARNING -  19%|#8        | 918k/4.92M [00:02<00:03, 1.23MB/s]
+[2024-05-13T07:15:40.687+0000] {logging_mixin.py:151} WARNING -  37%|###7      | 1.83M/4.92M [00:02<00:01, 2.57MB/s]
+[2024-05-13T07:15:40.831+0000] {logging_mixin.py:151} WARNING -  74%|#######3  | 3.64M/4.92M [00:02<00:00, 5.31MB/s]
+[2024-05-13T07:15:40.845+0000] {logging_mixin.py:151} WARNING - 4.94MB [00:02, 2.01MB/s]                            
+[2024-05-13T07:15:40.962+0000] {sasrec_dag.py:117} INFO -        user_id  item_id  rating  timestamp
+0          196      242       3  881250949
+1          186      302       3  891717742
+2           22      377       1  878887116
+3          244       51       2  880606923
+4          166      346       1  886397596
+...        ...      ...     ...        ...
+99995      880      476       3  880175444
+99996      716      204       5  879795543
+99997      276     1090       1  874795795
+99998       13      225       2  882399156
+99999       12      203       3  879959583
+
+[100000 rows x 4 columns]
+[2024-05-13T07:15:41.030+0000] {python.py:194} INFO - Done. Returned value was: True
+[2024-05-13T07:15:41.049+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Sasrec_model_DAG, task_id=preprocess_data, execution_date=20240513T071532, start_date=20240513T071538, end_date=20240513T071541
+[2024-05-13T07:15:41.074+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-05-13T07:15:41.095+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check
