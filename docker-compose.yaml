@@ -290,27 +290,11 @@ services:
         condition: service_completed_successfully
 
   mlflow-server:
-    image: ghcr.io/mishatheproger/replay_edu_course/base-images/mlflow:2.7.0-python3.10
+    image: tech-point.ailabtools.org:5055/ai-lab-pmo/mltools/recsys/various-tasks/ailabrecsyscourse:mlflow2.7.0-python3.10
     ports:
       - "5000:5000"
     volumes:
       - mlflow-data:/mlflow
-
-  # mlflow-model:
-  #   image: ghcr.io/mlflow/mlflow:2.7.0
-  #   ports:
-  #     - "5005:5005"
-  #   environment:
-  #     MLFLOW_TRACKING_URI: "http://mlflow-server:5000"
-  #   command:
-  #     - mlflow
-  #     - models
-  #     - serve
-  #     - --env-manager local
-  #     - -m models:/lr_model/latest
-  #     - -p 5005
-    
-
 
 volumes:
   postgres-db-volume:
