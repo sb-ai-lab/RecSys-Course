@@ -1,326 +1,0 @@
-[2024-05-13T08:00:04.822+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Sasrec_model_DAG.model_fit manual__2024-05-13T07:15:32.708775+00:00 [queued]>
-[2024-05-13T08:00:04.829+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Sasrec_model_DAG.model_fit manual__2024-05-13T07:15:32.708775+00:00 [queued]>
-[2024-05-13T08:00:04.829+0000] {taskinstance.py:1359} INFO - Starting attempt 3 of 3
-[2024-05-13T08:00:04.840+0000] {taskinstance.py:1380} INFO - Executing <Task(_PythonDecoratedOperator): model_fit> on 2024-05-13 07:15:32.708775+00:00
-[2024-05-13T08:00:04.852+0000] {standard_task_runner.py:57} INFO - Started process 1969 to run task
-[2024-05-13T08:00:04.855+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Sasrec_model_DAG', 'model_fit', 'manual__2024-05-13T07:15:32.708775+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/sasrec_dag.py', '--cfg-path', '/tmp/tmp7f6hkdy2']
-[2024-05-13T08:00:04.858+0000] {standard_task_runner.py:85} INFO - Job 13: Subtask model_fit
-[2024-05-13T08:00:04.897+0000] {task_command.py:415} INFO - Running <TaskInstance: Sasrec_model_DAG.model_fit manual__2024-05-13T07:15:32.708775+00:00 [running]> on host a7d11f6dcbcd
-[2024-05-13T08:00:04.964+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Sasrec_model_DAG' AIRFLOW_CTX_TASK_ID='model_fit' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T07:15:32.708775+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-13T07:15:32.708775+00:00'
-[2024-05-13T08:00:04.988+0000] {instantiator.py:21} INFO - Created a temporary directory at /tmp/tmpqw4hdwoj
-[2024-05-13T08:00:04.988+0000] {instantiator.py:76} INFO - Writing /tmp/tmpqw4hdwoj/_remote_module_non_scriptable.py
-[2024-05-13T08:00:05.263+0000] {log.py:232} WARNING - INFO: GPU available: False, used: False
-[2024-05-13T08:00:05.263+0000] {rank_zero.py:63} INFO - GPU available: False, used: False
-[2024-05-13T08:00:05.263+0000] {log.py:232} WARNING - INFO: TPU available: False, using: 0 TPU cores
-[2024-05-13T08:00:05.263+0000] {rank_zero.py:63} INFO - TPU available: False, using: 0 TPU cores
-[2024-05-13T08:00:05.264+0000] {log.py:232} WARNING - INFO: IPU available: False, using: 0 IPUs
-[2024-05-13T08:00:05.264+0000] {rank_zero.py:63} INFO - IPU available: False, using: 0 IPUs
-[2024-05-13T08:00:05.264+0000] {log.py:232} WARNING - INFO: HPU available: False, using: 0 HPUs
-[2024-05-13T08:00:05.264+0000] {rank_zero.py:63} INFO - HPU available: False, using: 0 HPUs
-[2024-05-13T08:00:05.291+0000] {exceptions.py:175} WARNING - /home/***/.local/lib/python3.10/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:653: Checkpoint directory /opt/***/model_checkpoints exists and is not empty.
-
-[2024-05-13T08:00:05.294+0000] {log.py:232} WARNING - INFO: 
-  | Name   | Type             | Params
---------------------------------------------
-0 | _model | SasRecModel      | 159 K 
-1 | _loss  | CrossEntropyLoss | 0     
---------------------------------------------
-159 K     Trainable params
-0         Non-trainable params
-159 K     Total params
-0.637     Total estimated model params size (MB)
-[2024-05-13T08:00:05.294+0000] {model_summary.py:94} INFO - 
-  | Name   | Type             | Params
---------------------------------------------
-0 | _model | SasRecModel      | 159 K 
-1 | _loss  | CrossEntropyLoss | 0     
---------------------------------------------
-159 K     Trainable params
-0         Non-trainable params
-159 K     Total params
-0.637     Total estimated model params size (MB)
-[2024-05-13T08:00:05.301+0000] {logging_mixin.py:151} INFO - Sanity Checking: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:05.302+0000] {exceptions.py:175} WARNING - /home/***/.local/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:441: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
-
-[2024-05-13T08:00:05.383+0000] {logging_mixin.py:151} INFO - Sanity Checking:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:05.383+0000] {logging_mixin.py:151} INFO - Sanity Checking DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:05.423+0000] {logging_mixin.py:151} INFO - Sanity Checking DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 24.45it/s]
-[2024-05-13T08:00:05.520+0000] {logging_mixin.py:151} INFO - Sanity Checking DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 14.48it/s]
-[2024-05-13T08:00:05.537+0000] {logging_mixin.py:151} INFO - k         1        10        20         5
-map     0.0  0.002166  0.002646  0.001573
-ndcg    0.0  0.004121  0.005777  0.002721
-recall  0.0  0.010604  0.016967  0.006363
-[2024-05-13T08:00:05.538+0000] {logging_mixin.py:151} INFO -                                                                            
-[2024-05-13T08:00:05.539+0000] {exceptions.py:175} WARNING - /home/***/.local/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:441: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=47` in the `DataLoader` to improve performance.
-
-[2024-05-13T08:00:05.540+0000] {exceptions.py:175} WARNING - /home/***/.local/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py:298: The number of training batches (2) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
-
-[2024-05-13T08:00:05.541+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:05.541+0000] {logging_mixin.py:151} INFO - Training: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:05.541+0000] {logging_mixin.py:151} INFO - Training:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:05.541+0000] {logging_mixin.py:151} INFO - Epoch 0:   0%|          | 0/2 [00:00<?, ?it/s] 
-[2024-05-13T08:00:05.674+0000] {logging_mixin.py:151} INFO - Epoch 0:  50%|#####     | 1/2 [00:00<00:00,  7.53it/s]
-[2024-05-13T08:00:05.675+0000] {logging_mixin.py:151} INFO - Epoch 0:  50%|#####     | 1/2 [00:00<00:00,  7.48it/s, v_num=2, train_loss_step=7.470]
-[2024-05-13T08:00:05.775+0000] {logging_mixin.py:151} INFO - Epoch 0: 100%|##########| 2/2 [00:00<00:00,  8.56it/s, v_num=2, train_loss_step=7.470]
-[2024-05-13T08:00:05.775+0000] {logging_mixin.py:151} INFO - Epoch 0: 100%|##########| 2/2 [00:00<00:00,  8.53it/s, v_num=2, train_loss_step=7.450]
-[2024-05-13T08:00:05.777+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:05.777+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:05.851+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:05.851+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:05.851+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:05.852+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:05.866+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 65.88it/s]
-[2024-05-13T08:00:05.866+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:05.942+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 21.89it/s]
-[2024-05-13T08:00:05.942+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:05.952+0000] {logging_mixin.py:151} INFO - k             1        10        20         5
-map     0.00106  0.004079  0.004395  0.002775
-ndcg    0.00106  0.007018  0.008295  0.003901
-recall  0.00106  0.016967  0.022269  0.007423
-[2024-05-13T08:00:05.958+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:05.958+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:05.959+0000] {logging_mixin.py:151} INFO - Epoch 0: 100%|##########| 2/2 [00:00<00:00,  4.79it/s, v_num=2, train_loss_step=7.450]
-[2024-05-13T08:00:05.960+0000] {logging_mixin.py:151} INFO - Epoch 0: 100%|##########| 2/2 [00:00<00:00,  4.78it/s, v_num=2, train_loss_step=7.450, train_loss_epoch=7.460]
-[2024-05-13T08:00:05.961+0000] {log.py:232} WARNING - INFO: Epoch 0, global step 2: 'recall@10' reached 0.01697 (best 0.01697), saving model to '/opt/***/model_checkpoints/epoch=0-step=2-v1.ckpt' as top 1
-[2024-05-13T08:00:05.961+0000] {rank_zero.py:63} INFO - Epoch 0, global step 2: 'recall@10' reached 0.01697 (best 0.01697), saving model to '/opt/***/model_checkpoints/epoch=0-step=2-v1.ckpt' as top 1
-[2024-05-13T08:00:05.977+0000] {logging_mixin.py:151} INFO - Epoch 0:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.450, train_loss_epoch=7.460]        
-[2024-05-13T08:00:05.977+0000] {logging_mixin.py:151} INFO - Epoch 1:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.450, train_loss_epoch=7.460]
-[2024-05-13T08:00:06.086+0000] {logging_mixin.py:151} INFO - Epoch 1:  50%|#####     | 1/2 [00:00<00:00,  9.13it/s, v_num=2, train_loss_step=7.450, train_loss_epoch=7.460]
-[2024-05-13T08:00:06.087+0000] {logging_mixin.py:151} INFO - Epoch 1:  50%|#####     | 1/2 [00:00<00:00,  9.07it/s, v_num=2, train_loss_step=7.440, train_loss_epoch=7.460]
-[2024-05-13T08:00:06.183+0000] {logging_mixin.py:151} INFO - Epoch 1: 100%|##########| 2/2 [00:00<00:00,  9.69it/s, v_num=2, train_loss_step=7.440, train_loss_epoch=7.460]
-[2024-05-13T08:00:06.184+0000] {logging_mixin.py:151} INFO - Epoch 1: 100%|##########| 2/2 [00:00<00:00,  9.66it/s, v_num=2, train_loss_step=7.430, train_loss_epoch=7.460]
-[2024-05-13T08:00:06.185+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:06.186+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.258+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:06.259+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.259+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:06.259+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.274+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 64.21it/s]
-[2024-05-13T08:00:06.274+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.348+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 22.14it/s]
-[2024-05-13T08:00:06.349+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.358+0000] {logging_mixin.py:151} INFO - k              1        10        20         5
-map     0.002121  0.005393  0.006128  0.004542
-ndcg    0.002121  0.007830  0.010686  0.005770
-recall  0.002121  0.015907  0.027572  0.009544
-[2024-05-13T08:00:06.364+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:06.365+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.365+0000] {logging_mixin.py:151} INFO - Epoch 1: 100%|##########| 2/2 [00:00<00:00,  5.15it/s, v_num=2, train_loss_step=7.430, train_loss_epoch=7.460]
-[2024-05-13T08:00:06.366+0000] {logging_mixin.py:151} INFO - Epoch 1: 100%|##########| 2/2 [00:00<00:00,  5.13it/s, v_num=2, train_loss_step=7.430, train_loss_epoch=7.430]
-[2024-05-13T08:00:06.367+0000] {log.py:232} WARNING - INFO: Epoch 1, global step 4: 'recall@10' was not in top 1
-[2024-05-13T08:00:06.367+0000] {rank_zero.py:63} INFO - Epoch 1, global step 4: 'recall@10' was not in top 1
-[2024-05-13T08:00:06.373+0000] {logging_mixin.py:151} INFO - Epoch 1:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.430, train_loss_epoch=7.430]        
-[2024-05-13T08:00:06.373+0000] {logging_mixin.py:151} INFO - Epoch 2:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.430, train_loss_epoch=7.430]
-[2024-05-13T08:00:06.489+0000] {logging_mixin.py:151} INFO - Epoch 2:  50%|#####     | 1/2 [00:00<00:00,  8.58it/s, v_num=2, train_loss_step=7.430, train_loss_epoch=7.430]
-[2024-05-13T08:00:06.490+0000] {logging_mixin.py:151} INFO - Epoch 2:  50%|#####     | 1/2 [00:00<00:00,  8.50it/s, v_num=2, train_loss_step=7.410, train_loss_epoch=7.430]
-[2024-05-13T08:00:06.613+0000] {logging_mixin.py:151} INFO - Epoch 2: 100%|##########| 2/2 [00:00<00:00,  8.34it/s, v_num=2, train_loss_step=7.410, train_loss_epoch=7.430]
-[2024-05-13T08:00:06.613+0000] {logging_mixin.py:151} INFO - Epoch 2: 100%|##########| 2/2 [00:00<00:00,  8.32it/s, v_num=2, train_loss_step=7.400, train_loss_epoch=7.430]
-[2024-05-13T08:00:06.615+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:06.615+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.689+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:06.690+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.690+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:06.690+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.704+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 65.97it/s]
-[2024-05-13T08:00:06.705+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.780+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 21.96it/s]
-[2024-05-13T08:00:06.780+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.790+0000] {logging_mixin.py:151} INFO - k              1        10        20         5
-map     0.002121  0.005666  0.006854  0.004719
-ndcg    0.002121  0.008275  0.012576  0.005917
-recall  0.002121  0.016967  0.033934  0.009544
-[2024-05-13T08:00:06.796+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:06.796+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:06.797+0000] {logging_mixin.py:151} INFO - Epoch 2: 100%|##########| 2/2 [00:00<00:00,  4.72it/s, v_num=2, train_loss_step=7.400, train_loss_epoch=7.430]
-[2024-05-13T08:00:06.798+0000] {logging_mixin.py:151} INFO - Epoch 2: 100%|##########| 2/2 [00:00<00:00,  4.70it/s, v_num=2, train_loss_step=7.400, train_loss_epoch=7.410]
-[2024-05-13T08:00:06.799+0000] {log.py:232} WARNING - INFO: Epoch 2, global step 6: 'recall@10' was not in top 1
-[2024-05-13T08:00:06.799+0000] {rank_zero.py:63} INFO - Epoch 2, global step 6: 'recall@10' was not in top 1
-[2024-05-13T08:00:06.804+0000] {logging_mixin.py:151} INFO - Epoch 2:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.400, train_loss_epoch=7.410]        
-[2024-05-13T08:00:06.805+0000] {logging_mixin.py:151} INFO - Epoch 3:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.400, train_loss_epoch=7.410]
-[2024-05-13T08:00:06.911+0000] {logging_mixin.py:151} INFO - Epoch 3:  50%|#####     | 1/2 [00:00<00:00,  9.42it/s, v_num=2, train_loss_step=7.400, train_loss_epoch=7.410]
-[2024-05-13T08:00:06.911+0000] {logging_mixin.py:151} INFO - Epoch 3:  50%|#####     | 1/2 [00:00<00:00,  9.35it/s, v_num=2, train_loss_step=7.380, train_loss_epoch=7.410]
-[2024-05-13T08:00:07.017+0000] {logging_mixin.py:151} INFO - Epoch 3: 100%|##########| 2/2 [00:00<00:00,  9.44it/s, v_num=2, train_loss_step=7.380, train_loss_epoch=7.410]
-[2024-05-13T08:00:07.018+0000] {logging_mixin.py:151} INFO - Epoch 3: 100%|##########| 2/2 [00:00<00:00,  9.35it/s, v_num=2, train_loss_step=7.360, train_loss_epoch=7.410]
-[2024-05-13T08:00:07.021+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:07.021+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.094+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:07.095+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.095+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:07.095+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.110+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 61.21it/s]
-[2024-05-13T08:00:07.111+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.185+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 21.86it/s]
-[2024-05-13T08:00:07.186+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.196+0000] {logging_mixin.py:151} INFO - k              1        10        20         5
-map     0.003181  0.006996  0.008747  0.005426
-ndcg    0.003181  0.010675  0.017096  0.006691
-recall  0.003181  0.023330  0.048780  0.010604
-[2024-05-13T08:00:07.203+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:07.203+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.203+0000] {logging_mixin.py:151} INFO - Epoch 3: 100%|##########| 2/2 [00:00<00:00,  5.01it/s, v_num=2, train_loss_step=7.360, train_loss_epoch=7.410]
-[2024-05-13T08:00:07.204+0000] {logging_mixin.py:151} INFO - Epoch 3: 100%|##########| 2/2 [00:00<00:00,  5.00it/s, v_num=2, train_loss_step=7.360, train_loss_epoch=7.370]
-[2024-05-13T08:00:07.206+0000] {log.py:232} WARNING - INFO: Epoch 3, global step 8: 'recall@10' reached 0.02333 (best 0.02333), saving model to '/opt/***/model_checkpoints/epoch=3-step=8.ckpt' as top 1
-[2024-05-13T08:00:07.206+0000] {rank_zero.py:63} INFO - Epoch 3, global step 8: 'recall@10' reached 0.02333 (best 0.02333), saving model to '/opt/***/model_checkpoints/epoch=3-step=8.ckpt' as top 1
-[2024-05-13T08:00:07.221+0000] {logging_mixin.py:151} INFO - Epoch 3:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.360, train_loss_epoch=7.370]        
-[2024-05-13T08:00:07.222+0000] {logging_mixin.py:151} INFO - Epoch 4:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.360, train_loss_epoch=7.370]
-[2024-05-13T08:00:07.328+0000] {logging_mixin.py:151} INFO - Epoch 4:  50%|#####     | 1/2 [00:00<00:00,  9.34it/s, v_num=2, train_loss_step=7.360, train_loss_epoch=7.370]
-[2024-05-13T08:00:07.329+0000] {logging_mixin.py:151} INFO - Epoch 4:  50%|#####     | 1/2 [00:00<00:00,  9.28it/s, v_num=2, train_loss_step=7.330, train_loss_epoch=7.370]
-[2024-05-13T08:00:07.449+0000] {logging_mixin.py:151} INFO - Epoch 4: 100%|##########| 2/2 [00:00<00:00,  8.79it/s, v_num=2, train_loss_step=7.330, train_loss_epoch=7.370]
-[2024-05-13T08:00:07.450+0000] {logging_mixin.py:151} INFO - Epoch 4: 100%|##########| 2/2 [00:00<00:00,  8.75it/s, v_num=2, train_loss_step=7.310, train_loss_epoch=7.370]
-[2024-05-13T08:00:07.452+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:07.452+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.528+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:07.528+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.528+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:07.528+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.558+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 32.54it/s]
-[2024-05-13T08:00:07.558+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.643+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 17.32it/s]
-[2024-05-13T08:00:07.643+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.653+0000] {logging_mixin.py:151} INFO - k              1        10        20         5
-map     0.005302  0.010725  0.011948  0.008324
-ndcg    0.005302  0.016191  0.020718  0.010163
-recall  0.005302  0.034995  0.053022  0.015907
-[2024-05-13T08:00:07.659+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:07.659+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:07.659+0000] {logging_mixin.py:151} INFO - Epoch 4: 100%|##########| 2/2 [00:00<00:00,  4.57it/s, v_num=2, train_loss_step=7.310, train_loss_epoch=7.370]
-[2024-05-13T08:00:07.660+0000] {logging_mixin.py:151} INFO - Epoch 4: 100%|##########| 2/2 [00:00<00:00,  4.55it/s, v_num=2, train_loss_step=7.310, train_loss_epoch=7.330]
-[2024-05-13T08:00:07.661+0000] {log.py:232} WARNING - INFO: Epoch 4, global step 10: 'recall@10' reached 0.03499 (best 0.03499), saving model to '/opt/***/model_checkpoints/epoch=4-step=10.ckpt' as top 1
-[2024-05-13T08:00:07.661+0000] {rank_zero.py:63} INFO - Epoch 4, global step 10: 'recall@10' reached 0.03499 (best 0.03499), saving model to '/opt/***/model_checkpoints/epoch=4-step=10.ckpt' as top 1
-[2024-05-13T08:00:07.679+0000] {logging_mixin.py:151} INFO - Epoch 4:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.310, train_loss_epoch=7.330]        
-[2024-05-13T08:00:07.679+0000] {logging_mixin.py:151} INFO - Epoch 5:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.310, train_loss_epoch=7.330]
-[2024-05-13T08:00:07.917+0000] {logging_mixin.py:151} INFO - Epoch 5:  50%|#####     | 1/2 [00:00<00:00,  4.20it/s, v_num=2, train_loss_step=7.310, train_loss_epoch=7.330]
-[2024-05-13T08:00:07.918+0000] {logging_mixin.py:151} INFO - Epoch 5:  50%|#####     | 1/2 [00:00<00:00,  4.19it/s, v_num=2, train_loss_step=7.290, train_loss_epoch=7.330]
-[2024-05-13T08:00:08.029+0000] {logging_mixin.py:151} INFO - Epoch 5: 100%|##########| 2/2 [00:00<00:00,  5.72it/s, v_num=2, train_loss_step=7.290, train_loss_epoch=7.330]
-[2024-05-13T08:00:08.029+0000] {logging_mixin.py:151} INFO - Epoch 5: 100%|##########| 2/2 [00:00<00:00,  5.71it/s, v_num=2, train_loss_step=7.270, train_loss_epoch=7.330]
-[2024-05-13T08:00:08.031+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:08.031+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.104+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:08.104+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.104+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:08.104+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.119+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 65.43it/s]
-[2024-05-13T08:00:08.119+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.194+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 22.03it/s]
-[2024-05-13T08:00:08.194+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.204+0000] {logging_mixin.py:151} INFO - k              1        10        20         5
-map     0.004242  0.011931  0.013500  0.010339
-ndcg    0.004242  0.017320  0.022978  0.013513
-recall  0.004242  0.034995  0.057264  0.023330
-[2024-05-13T08:00:08.210+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:08.210+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.210+0000] {logging_mixin.py:151} INFO - Epoch 5: 100%|##########| 2/2 [00:00<00:00,  3.76it/s, v_num=2, train_loss_step=7.270, train_loss_epoch=7.330]
-[2024-05-13T08:00:08.211+0000] {logging_mixin.py:151} INFO - Epoch 5: 100%|##########| 2/2 [00:00<00:00,  3.76it/s, v_num=2, train_loss_step=7.270, train_loss_epoch=7.280]
-[2024-05-13T08:00:08.212+0000] {log.py:232} WARNING - INFO: Epoch 5, global step 12: 'recall@10' was not in top 1
-[2024-05-13T08:00:08.212+0000] {rank_zero.py:63} INFO - Epoch 5, global step 12: 'recall@10' was not in top 1
-[2024-05-13T08:00:08.218+0000] {logging_mixin.py:151} INFO - Epoch 5:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.270, train_loss_epoch=7.280]        
-[2024-05-13T08:00:08.218+0000] {logging_mixin.py:151} INFO - Epoch 6:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.270, train_loss_epoch=7.280]
-[2024-05-13T08:00:08.333+0000] {logging_mixin.py:151} INFO - Epoch 6:  50%|#####     | 1/2 [00:00<00:00,  8.73it/s, v_num=2, train_loss_step=7.270, train_loss_epoch=7.280]
-[2024-05-13T08:00:08.333+0000] {logging_mixin.py:151} INFO - Epoch 6:  50%|#####     | 1/2 [00:00<00:00,  8.67it/s, v_num=2, train_loss_step=7.240, train_loss_epoch=7.280]
-[2024-05-13T08:00:08.425+0000] {logging_mixin.py:151} INFO - Epoch 6: 100%|##########| 2/2 [00:00<00:00,  9.67it/s, v_num=2, train_loss_step=7.240, train_loss_epoch=7.280]
-[2024-05-13T08:00:08.425+0000] {logging_mixin.py:151} INFO - Epoch 6: 100%|##########| 2/2 [00:00<00:00,  9.64it/s, v_num=2, train_loss_step=7.190, train_loss_epoch=7.280]
-[2024-05-13T08:00:08.427+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:08.427+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.499+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:08.499+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.500+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:08.500+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.514+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 67.55it/s]
-[2024-05-13T08:00:08.514+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.589+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 22.23it/s]
-[2024-05-13T08:00:08.589+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.599+0000] {logging_mixin.py:151} INFO - k              1        10        20         5
-map     0.007423  0.014767  0.016741  0.012955
-ndcg    0.007423  0.020681  0.027904  0.016250
-recall  0.007423  0.040297  0.068929  0.026511
-[2024-05-13T08:00:08.605+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:08.605+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.605+0000] {logging_mixin.py:151} INFO - Epoch 6: 100%|##########| 2/2 [00:00<00:00,  5.16it/s, v_num=2, train_loss_step=7.190, train_loss_epoch=7.280]
-[2024-05-13T08:00:08.606+0000] {logging_mixin.py:151} INFO - Epoch 6: 100%|##########| 2/2 [00:00<00:00,  5.15it/s, v_num=2, train_loss_step=7.190, train_loss_epoch=7.220]
-[2024-05-13T08:00:08.607+0000] {log.py:232} WARNING - INFO: Epoch 6, global step 14: 'recall@10' reached 0.04030 (best 0.04030), saving model to '/opt/***/model_checkpoints/epoch=6-step=14.ckpt' as top 1
-[2024-05-13T08:00:08.607+0000] {rank_zero.py:63} INFO - Epoch 6, global step 14: 'recall@10' reached 0.04030 (best 0.04030), saving model to '/opt/***/model_checkpoints/epoch=6-step=14.ckpt' as top 1
-[2024-05-13T08:00:08.623+0000] {logging_mixin.py:151} INFO - Epoch 6:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.190, train_loss_epoch=7.220]        
-[2024-05-13T08:00:08.623+0000] {logging_mixin.py:151} INFO - Epoch 7:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.190, train_loss_epoch=7.220]
-[2024-05-13T08:00:08.734+0000] {logging_mixin.py:151} INFO - Epoch 7:  50%|#####     | 1/2 [00:00<00:00,  9.06it/s, v_num=2, train_loss_step=7.190, train_loss_epoch=7.220]
-[2024-05-13T08:00:08.734+0000] {logging_mixin.py:151} INFO - Epoch 7:  50%|#####     | 1/2 [00:00<00:00,  8.97it/s, v_num=2, train_loss_step=7.180, train_loss_epoch=7.220]
-[2024-05-13T08:00:08.833+0000] {logging_mixin.py:151} INFO - Epoch 7: 100%|##########| 2/2 [00:00<00:00,  9.55it/s, v_num=2, train_loss_step=7.180, train_loss_epoch=7.220]
-[2024-05-13T08:00:08.833+0000] {logging_mixin.py:151} INFO - Epoch 7: 100%|##########| 2/2 [00:00<00:00,  9.52it/s, v_num=2, train_loss_step=7.150, train_loss_epoch=7.220]
-[2024-05-13T08:00:08.838+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:08.838+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.910+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:08.910+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.911+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:08.911+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:08.926+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 60.32it/s]
-[2024-05-13T08:00:08.927+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.002+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 21.67it/s]
-[2024-05-13T08:00:09.002+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.012+0000] {logging_mixin.py:151} INFO - k              1        10        20         5
-map     0.008484  0.016442  0.018480  0.013715
-ndcg    0.008484  0.023339  0.030817  0.016583
-recall  0.008484  0.046660  0.076352  0.025451
-[2024-05-13T08:00:09.018+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:09.018+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.019+0000] {logging_mixin.py:151} INFO - Epoch 7: 100%|##########| 2/2 [00:00<00:00,  5.05it/s, v_num=2, train_loss_step=7.150, train_loss_epoch=7.220]
-[2024-05-13T08:00:09.020+0000] {logging_mixin.py:151} INFO - Epoch 7: 100%|##########| 2/2 [00:00<00:00,  5.04it/s, v_num=2, train_loss_step=7.150, train_loss_epoch=7.160]
-[2024-05-13T08:00:09.021+0000] {log.py:232} WARNING - INFO: Epoch 7, global step 16: 'recall@10' reached 0.04666 (best 0.04666), saving model to '/opt/***/model_checkpoints/epoch=7-step=16.ckpt' as top 1
-[2024-05-13T08:00:09.021+0000] {rank_zero.py:63} INFO - Epoch 7, global step 16: 'recall@10' reached 0.04666 (best 0.04666), saving model to '/opt/***/model_checkpoints/epoch=7-step=16.ckpt' as top 1
-[2024-05-13T08:00:09.037+0000] {logging_mixin.py:151} INFO - Epoch 7:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.150, train_loss_epoch=7.160]        
-[2024-05-13T08:00:09.037+0000] {logging_mixin.py:151} INFO - Epoch 8:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.150, train_loss_epoch=7.160]
-[2024-05-13T08:00:09.147+0000] {logging_mixin.py:151} INFO - Epoch 8:  50%|#####     | 1/2 [00:00<00:00,  9.03it/s, v_num=2, train_loss_step=7.150, train_loss_epoch=7.160]
-[2024-05-13T08:00:09.148+0000] {logging_mixin.py:151} INFO - Epoch 8:  50%|#####     | 1/2 [00:00<00:00,  8.98it/s, v_num=2, train_loss_step=7.110, train_loss_epoch=7.160]
-[2024-05-13T08:00:09.240+0000] {logging_mixin.py:151} INFO - Epoch 8: 100%|##########| 2/2 [00:00<00:00,  9.81it/s, v_num=2, train_loss_step=7.110, train_loss_epoch=7.160]
-[2024-05-13T08:00:09.241+0000] {logging_mixin.py:151} INFO - Epoch 8: 100%|##########| 2/2 [00:00<00:00,  9.78it/s, v_num=2, train_loss_step=7.090, train_loss_epoch=7.160]
-[2024-05-13T08:00:09.243+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:09.244+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.315+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:09.316+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.316+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:09.316+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.330+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 66.37it/s]
-[2024-05-13T08:00:09.330+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.404+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 22.47it/s]
-[2024-05-13T08:00:09.404+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.414+0000] {logging_mixin.py:151} INFO - k              1        10        20         5
-map     0.008484  0.017159  0.019385  0.014510
-ndcg    0.008484  0.023935  0.031826  0.017464
-recall  0.008484  0.046660  0.077413  0.026511
-[2024-05-13T08:00:09.419+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:09.419+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.420+0000] {logging_mixin.py:151} INFO - Epoch 8: 100%|##########| 2/2 [00:00<00:00,  5.22it/s, v_num=2, train_loss_step=7.090, train_loss_epoch=7.160]
-[2024-05-13T08:00:09.421+0000] {logging_mixin.py:151} INFO - Epoch 8: 100%|##########| 2/2 [00:00<00:00,  5.20it/s, v_num=2, train_loss_step=7.090, train_loss_epoch=7.100]
-[2024-05-13T08:00:09.422+0000] {log.py:232} WARNING - INFO: Epoch 8, global step 18: 'recall@10' was not in top 1
-[2024-05-13T08:00:09.422+0000] {rank_zero.py:63} INFO - Epoch 8, global step 18: 'recall@10' was not in top 1
-[2024-05-13T08:00:09.427+0000] {logging_mixin.py:151} INFO - Epoch 8:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.090, train_loss_epoch=7.100]        
-[2024-05-13T08:00:09.428+0000] {logging_mixin.py:151} INFO - Epoch 9:   0%|          | 0/2 [00:00<?, ?it/s, v_num=2, train_loss_step=7.090, train_loss_epoch=7.100]
-[2024-05-13T08:00:09.531+0000] {logging_mixin.py:151} INFO - Epoch 9:  50%|#####     | 1/2 [00:00<00:00,  9.66it/s, v_num=2, train_loss_step=7.090, train_loss_epoch=7.100]
-[2024-05-13T08:00:09.531+0000] {logging_mixin.py:151} INFO - Epoch 9:  50%|#####     | 1/2 [00:00<00:00,  9.60it/s, v_num=2, train_loss_step=7.060, train_loss_epoch=7.100]
-[2024-05-13T08:00:09.627+0000] {logging_mixin.py:151} INFO - Epoch 9: 100%|##########| 2/2 [00:00<00:00, 10.00it/s, v_num=2, train_loss_step=7.060, train_loss_epoch=7.100]
-[2024-05-13T08:00:09.628+0000] {logging_mixin.py:151} INFO - Epoch 9: 100%|##########| 2/2 [00:00<00:00,  9.96it/s, v_num=2, train_loss_step=7.030, train_loss_epoch=7.100]
-[2024-05-13T08:00:09.631+0000] {logging_mixin.py:151} INFO - Validation: |          | 0/? [00:00<?, ?it/s]
-[2024-05-13T08:00:09.631+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.702+0000] {logging_mixin.py:151} INFO - Validation:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:09.703+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.703+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
-[2024-05-13T08:00:09.703+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.718+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0:  50%|#####     | 1/2 [00:00<00:00, 64.10it/s]
-[2024-05-13T08:00:09.718+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.793+0000] {logging_mixin.py:151} INFO - Validation DataLoader 0: 100%|##########| 2/2 [00:00<00:00, 21.96it/s]
-[2024-05-13T08:00:09.793+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.803+0000] {logging_mixin.py:151} INFO - k              1        10        20         5
-map     0.008484  0.018214  0.020321  0.015942
-ndcg    0.008484  0.025974  0.033890  0.020081
-recall  0.008484  0.051962  0.083775  0.032874
-[2024-05-13T08:00:09.808+0000] {logging_mixin.py:151} INFO -                                                                       
-[2024-05-13T08:00:09.809+0000] {logging_mixin.py:151} INFO - 
-[2024-05-13T08:00:09.809+0000] {logging_mixin.py:151} INFO - Epoch 9: 100%|##########| 2/2 [00:00<00:00,  5.24it/s, v_num=2, train_loss_step=7.030, train_loss_epoch=7.100]
-[2024-05-13T08:00:09.810+0000] {logging_mixin.py:151} INFO - Epoch 9: 100%|##########| 2/2 [00:00<00:00,  5.22it/s, v_num=2, train_loss_step=7.030, train_loss_epoch=7.050]
-[2024-05-13T08:00:09.811+0000] {log.py:232} WARNING - INFO: Epoch 9, global step 20: 'recall@10' reached 0.05196 (best 0.05196), saving model to '/opt/***/model_checkpoints/epoch=9-step=20.ckpt' as top 1
-[2024-05-13T08:00:09.811+0000] {rank_zero.py:63} INFO - Epoch 9, global step 20: 'recall@10' reached 0.05196 (best 0.05196), saving model to '/opt/***/model_checkpoints/epoch=9-step=20.ckpt' as top 1
-[2024-05-13T08:00:09.826+0000] {log.py:232} WARNING - INFO: `Trainer.fit` stopped: `max_epochs=10` reached.
-[2024-05-13T08:00:09.826+0000] {rank_zero.py:63} INFO - `Trainer.fit` stopped: `max_epochs=10` reached.
-[2024-05-13T08:00:09.827+0000] {logging_mixin.py:151} INFO - Epoch 9: 100%|##########| 2/2 [00:00<00:00,  5.01it/s, v_num=2, train_loss_step=7.030, train_loss_epoch=7.050]
-[2024-05-13T08:00:09.841+0000] {python.py:194} INFO - Done. Returned value was: /opt/***/model_checkpoints/epoch=9-step=20.ckpt
-[2024-05-13T08:00:09.867+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Sasrec_model_DAG, task_id=model_fit, execution_date=20240513T071532, start_date=20240513T080004, end_date=20240513T080009
-[2024-05-13T08:00:09.915+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
-[2024-05-13T08:00:09.931+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check
