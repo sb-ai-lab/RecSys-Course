@@ -5,5 +5,5 @@ conda_env:
   - python=3.10
   - pip==23.0
   - pip:
-    - replay-rec[all]==0.16.0
+    - replay-rec[torch]==0.16.0
   name: mlflow-env
