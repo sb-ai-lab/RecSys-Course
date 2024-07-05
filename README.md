@@ -5,7 +5,7 @@ The solution works stably even with 4 GB of RAM, except for the last step with s
 ## 🚀 How to start this masterpiece
 0. If you are using Windows OS then install [WSL]( https://learn.microsoft.com/ru-ru/windows/wsl/install)
 1. Install [docker](https://docs.docker.com/engine/install/)
-2. Login to docker to pull image `echo fJeZydz1H23CJzKstRuw | docker login tech-point.ailabtools.org:5055 -u USERNAME --password-stdin`
+2. Login to docker to pull image `echo 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 | docker login ghcr.io -u USERNAME --password-stdin`
 3. Infrastructure preparation using `docker compose up airflow-init`
 4. Run docker compose by `docker compose up`. Please note the terminal should not be interrupted for the correct operation of the entire pipeline.
 5. Forward ports `8085`, `5000`, `5006` to localhost. Port 8085 will be used by AirFlow, port 5000 will be used by MLFlow, port 5006 will be used to access the model via the REST API.
