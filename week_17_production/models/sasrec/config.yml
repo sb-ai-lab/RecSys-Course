@@ -1,0 +1,9 @@
+conda_env:
+  channels:
+  - conda-forge
+  dependencies:
+  - python=3.10
+  - pip==23.0
+  - pip:
+    - replay-rec[torch]==0.16.0
+  name: mlflow-env

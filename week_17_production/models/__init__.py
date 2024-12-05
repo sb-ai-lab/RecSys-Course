@@ -1,0 +1,1 @@
+from models.loader import model_class_for_inference
